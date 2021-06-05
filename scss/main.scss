@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+@import './variable';
+@import './card';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-size: 13px;
+}
+
+body {
+    background: $Light_grayish_blue;
+    width: 100%; height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1140px; min-width: 350px;
+    display: grid;
+    grid-gap: 20px; padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(290px, 1fr));
+}
+
+.card_container {
+    @include dropShadow;
+    padding: 30px 35px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    color: $White;
+}
+
+.card_header {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5px;
+    img {
+        width: 35px; height: 35px;
+        border-radius: 50px;
+        object-fit: cover;
+        margin-right: 15px;
+    }
+    h1 {
+        font-weight: 500;
+    }
+    p { 
+        margin-top: 2px;
+        opacity: 0.5;          
+    }
+}
+
+.description {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+.content {
+    line-height: 1.4;
+    font-size: 1em;
+    font-weight: 500;
+    opacity: 0.7;
+}
